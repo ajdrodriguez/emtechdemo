@@ -25,7 +25,7 @@ st.write("""### Developed by SarcasTeam (CPE32S2)""")
 sentence = st.text_input('Please enter a sentence.')
 
 if sentence == '':
-    st.text("Please enter a sentence.")
+    st.text("No sentence found. Please enter.")
     prediction1 = 0
     prediction2 = 0
 else:
