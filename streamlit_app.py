@@ -21,6 +21,7 @@ model1=load_LSTM_model()
 model2=load_CNN_model()
 
 st.write("""# Sarcasm Detection System""")
+st.write("""### Developed by SarcasTeam (CPE32S2)""")
 sentence = st.text_input('Please enter a sentence.')
 
 if sentence is None:
@@ -63,3 +64,14 @@ else:
     string2="OUTPUT OF CNN: "+output2
     st.success(string1)
     st.success(string2)
+
+st.markdown(
+"""
+SarcasTeam Members:
+- Brent Nolie Argente
+- Christian John Leste Jaraula
+- Jefferson Luis Langbid
+- Andrew John Rodriguez
+"""
+)
+    
