@@ -6,7 +6,8 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 voc_size=5000
 max_sent_length = 20
-
+prediction1 = 0
+prediction2 = 0
 
 def load_LSTM_model():
   LSTMmodel=tf.keras.models.load_model('LSTMModel.hdf5')
@@ -24,6 +25,8 @@ sentence = st.text_input('Please enter a sentence.')
 
 if sentence is None:
     st.text("Please enter a sentence.")
+    prediction1 = 0;
+    prediction2 = 0
 else:
     st.write('Inputted Sentence: ', sentence)
     predcorpus = [sentence]
