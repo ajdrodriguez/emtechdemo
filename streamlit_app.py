@@ -24,8 +24,10 @@ st.write("""# Sarcasm Detection System""")
 st.write("""### Developed by SarcasTeam (CPE32S2)""")
 sentence = st.text_input('Please enter a sentence.')
 
-if sentence is None:
+if sentence == '':
     st.text("Please enter a sentence.")
+    prediction1 = 0
+    prediction2 = 0
 else:
     st.write('Inputted Sentence: ', sentence)
     predcorpus = [sentence]
