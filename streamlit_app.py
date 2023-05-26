@@ -67,6 +67,8 @@ else:
     st.success(string1)
     st.success(string2)
 
+st.write("")
+st.write("")
 st.markdown(
 """
 SarcasTeam Members:
