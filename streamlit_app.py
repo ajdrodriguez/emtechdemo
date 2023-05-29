@@ -44,7 +44,7 @@ else:
         output1 = 'Sarcasm Detected'
     else:
         output1 = 'No Sarcasm Detected'
-    prediction1 = (str(prediction1[0][0]*100))+'%'
+    prediction1 = "{:.2f} %".format(prediction1[0][0]*100)
 
 
 
@@ -59,7 +59,7 @@ else:
     else:
         output2 = 'No Sarcasm Detected'
 
-    prediction2 = (str(prediction2[0][0]*100))+'%'
+    prediction2 = "{:.2f} %".format(prediction2[0][0]*100)
     st.write("Prediction Accuracy (LSTM): ", prediction1)
     st.write("Prediction Accuracy (CNN): ", prediction2)
     string1="OUTPUT OF LSTM: "+output1
