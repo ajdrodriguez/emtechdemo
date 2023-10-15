@@ -24,6 +24,9 @@ jobs:
     - name: Run tests
       run: python tests.py
 
-    - name: Merge to main (if tests pass)
+    - name: Check test results and fail if tests failed
+      run: echo "Checking test results" && exit $(($(grep -c "FAILED" test_results.txt)))
+
+    - name: Merge to main
       if: success()
       run: git merge main
