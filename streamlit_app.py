@@ -16,7 +16,7 @@ def load_LSTM_model():
 
 def load_CNN_model():
   CNNModel=tf.keras.models.load_model('cnnmodel.hdf5')
-  print("CNN file loaded..." + 2)
+  print("CNN file loaded...")
   return CNNModel
 
 model1=load_LSTM_model()
