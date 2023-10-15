@@ -11,7 +11,7 @@ prediction2 = 0
 
 def load_LSTM_model():
   LSTMmodel=tf.keras.models.load_model('LSTMModel.hdf5')
-  print("LSTM file loaded...")
+  printff("LSTM file loaded...")
   return LSTMmodel
 
 def load_CNN_model():
