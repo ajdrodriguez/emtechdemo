@@ -25,7 +25,13 @@ jobs:
       run: python tests.py
 
     - name: Check test results and fail if tests failed
-      run: echo "Checking test results" && exit $(($(grep -c "FAILED" test_results.txt)))
+      run: |
+        echo "Checking test results"
+        test_exit_code=$(($(grep -c "FAILED" test_results.txt)))
+        if [ "$test_exit_code" -ne 0 ]; then
+          echo "Tests failed. Cancelling merge to main."
+          exit 1
+        fi
 
     - name: Merge to main
       if: success()
